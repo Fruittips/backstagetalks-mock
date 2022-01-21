@@ -1,0 +1,103 @@
+/* setting custom color for the page */
+:root {
+  --green: #00c1b5;
+  --yellow: #ffbe00;
+  --red: #e30512;
+  --orange: #ff651a;
+  --blue: #1d3fbb;
+  --black: #251d20;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: #251d20;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  pointer-events: auto;
+}
+
+a {
+  color: #251d20;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #251d20;
+  text-decoration: none;
+}
+
+.issue-wrapper {
+  position: absolute;
+  text-align: center;
+  max-height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.issue-wrapper img {
+  width: 80%;
+  max-width: 420px;
+}
+
+.issue-container {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  left: 50%;
+  top: 50%;
+  padding-top: 10vh;
+  text-align: center;
+  pointer-events: auto;
+}
+
+@media (min-width: 992px) and (min-height: 650px) {
+  .descriptions-container {
+    position: absolute;
+    bottom: 0px;
+    margin-left: 2%;
+    margin-bottom: 18px;
+    max-width: 320px;
+  }
+
+  .contacts-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* background-color: yellow; */
+    pointer-events: none;
+  }
+
+  .menu-container {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    width: 200px;
+    text-align: right;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: normal;
+}
